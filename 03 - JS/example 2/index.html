@@ -1,13 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Document</title>
-    <script src="script.js">  </script>
-</head>
-<body>
-    <h1> Hello</h1>
-</body>
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <h1>Hello</h1>
+
+    <table>
+      <tr>
+        <th class="title" colspan="100%">Journal</th>
+      </tr>
+      <tr class="subtitle">
+        <th>Dia</th>
+        <th>Actividades</th></th>
+        <th>Accidente</th>
+      </tr>
+    </table>
+    <h2>Agregar nuevo evento</h2>
+
+    <label for="dia">Dia:</label>
+    <input type="text" name="dia" id="dia"> 
+    
+    <label for="actividades">Actividades:</label>
+    <input type="text" name="actividades" id="eventos"> 
+    
+    <label for="accidente">Accidente:</label>
+    <input type="text" name="accidente" id="accidente"> 
+    <input type="submit" value="Guardar" class="guardar">
+  </body>
 </html>

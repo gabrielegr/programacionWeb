@@ -1,82 +1,113 @@
 function hello() {
-    //Instrucciones
-    console.log("hello");
+  //Instrucciones
+  console.log("hello");
 }
 
-var motivate = function() { 
-    console.log("Just do it"); 
+var motivate = function() {
+  console.log("Just do it");
 };
 
-var esPar = (x) => {
-    return x % 2 == 0;
+var esPar = x => {
+  return x % 2 == 0;
 };
 
 var saludar = (nombre = "Néstor") => {
-    console.log(`Hola ${nombre}, que guapo eres!`);
+  console.log(`Hola ${nombre}, que guapo eres!`);
 };
 
-var pass = (x) => {
-    console.log("EJECUNTANDO X");
-    x();
+var pass = x => {
+  console.log("EJECUNTANDO X");
+  x();
 };
 
-let triangulo =  function(n = 5)    {
-    let cadena = '';
-    for(let i = 0 ; i < n ;i++){
-        cadena += "*";
-        console.log(cadena);
+let triangulo = function(n = 5) {
+  let cadena = "";
+  for (let i = 0; i < n; i++) {
+    cadena += "*";
+    console.log(cadena);
+  }
+};
+
+let triangulo2 = function(n = 5) {
+  for (let i = 1; i <= n; i++) {
+    console.log("*".repeat(i));
+  }
+};
+
+let triangulo3 = function(n = 5) {
+  for (let i = 1; i <= n; i++) {
+    var cadAux = "";
+    for (let j = 1; j <= i; j++) {
+      cadAux += "*";
     }
+    console.log(cadAux);
+  }
 };
 
-let triangulo2 =  function(n = 5)    {
-    for(let i = 1 ; i <= n ;i++){
-        console.log("*".repeat(i));
+let semiRombo = function(n = 5) {
+  let cadena = "";
+  for (let i = 0; i < n; i++) {
+    cadena += "*";
+    console.log(cadena);
+  }
+
+  for (let i = n - 1; i >= 0; i--) {
+    cadena = cadena.substr(0, i);
+    console.log(cadena);
+  }
+};
+
+var fizzBuxx = arrg => {
+  for (let i = 0; i < arrg.length; i++) {
+    if (arrg[i] % 5 == 0 && arrg[i] % 3 == 0) {
+      console.log("FizzBuzz");
+    } else if (arrg[i] % 5 == 0) {
+      console.log("Buzz");
+    } else if (arrg[i] % 3 == 0) {
+      console.log("Fizz");
+    } else {
+      console.log(arrg[i]);
     }
+  }
 };
 
-
-let triangulo3 =  function(n = 5)    {
-    
-    for(let i = 1 ; i <= n ;i++){
-        var cadAux = "";
-        for(let j = 1; j <= i ; j++){
-            cadAux += "*";
-        }
-        console.log(cadAux);
-    }
+var juan = x => {
+  var _str =
+    (x % 3 == 0 ? "Fizz" : "") +
+    (x % 5 == 0 ? "Buzz" : "") +
+    (x % 3 == 0 || x % 5 == 0 ? "" : x);
+  console.log(_str);
 };
 
-let semiRombo =  function(n = 5)    {
-    let cadena = '';
-    for(let i = 0 ; i < n ;i++){
-        cadena += "*";
-        console.log(cadena);
-    }
+/*function addEvent() {
+  var dia = document.getElementById('dia').value;
+  var eventos = document.getElementById('ventos').value;
+  var accidente = document.getElementById('accidente').value;
+  var table = document.getElementsByTagName('table')[0];
+  var newRow = table.insertRow(-1);
+  var cel1 = newRow.insertCell(0);
+  var cel2 = newRow.insertCell(1);
+  var cel3 = newRow.insertCell(2);
+  cel1.innerHTML = dia;
+  cel2.innerHTML = eventos;
+  cel3.innerHTML = accidente;
+}*/
 
-    for(let i = n -1 ; i >= 0 ;i--){
-        cadena = cadena.substr(0,i);
-        console.log(cadena);
-    }
-};
-
-
-
-
-var fizzBuxx = (arrg) => {
-    for(let i = 0; i < arrg.length ; i++){
-        if( arrg[i] % 5 == 0 && arrg[i] % 3 == 0 ){
-            console.log("FizzBuzz");
-        }else if(arrg[i] % 5 == 0 ){
-            console.log("Buzz");
-        }else if(arrg[i] % 3 == 0 ) {
-            console.log("Fizz");
-        } else {
-            console.log(arrg[i]);
-        }
-    }
-};
-
-var juan = (x) => {
-    var  _str = ((x % 3 == 0) ? "Fizz": "") + ((x % 5 == 0) ? "Buzz": "") + (( x% 3 == 0 || x % 5 == 0 )? "" :x) 
-    console.log(_str);
-};
+function addEvent(){
+var btn = document.querySelector('.guardar');
+btn.addEventListener("click", ()=>{
+    var dia = document.getElementById('dia').value;
+    var eventos = document.getElementById('eventos').value;
+    var accidente = document.getElementById('accidente').value;
+    var table = document.getElementsByTagName('table')[0];
+    var newRow = table.insertRow(table.rows.length / 2 + 1);
+    var cel1 = newRow.insertCell(0);
+    var cel2 = newRow.insertCell(1);
+    var cel3 = newRow.insertCell(2);
+    cel1.innerHTML = dia;
+    cel2.innerHTML = eventos;
+    cel3.innerHTML = accidente;
+})};
+window.onload = function() {
+    addEvent();
+}
