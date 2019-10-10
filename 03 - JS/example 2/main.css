@@ -4,3 +4,13 @@ border-collapse:collapse;
 text-align: center;
 }
 
+.container{
+    display: flex;
+    margin-right: 10px;
+}
+
+label{
+    margin-left:10px;
+    margin-right: 5px;
+}
+

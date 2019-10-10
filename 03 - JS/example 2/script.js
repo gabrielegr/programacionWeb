@@ -79,35 +79,3 @@ var juan = x => {
   console.log(_str);
 };
 
-/*function addEvent() {
-  var dia = document.getElementById('dia').value;
-  var eventos = document.getElementById('ventos').value;
-  var accidente = document.getElementById('accidente').value;
-  var table = document.getElementsByTagName('table')[0];
-  var newRow = table.insertRow(-1);
-  var cel1 = newRow.insertCell(0);
-  var cel2 = newRow.insertCell(1);
-  var cel3 = newRow.insertCell(2);
-  cel1.innerHTML = dia;
-  cel2.innerHTML = eventos;
-  cel3.innerHTML = accidente;
-}*/
-
-function addEvent(){
-var btn = document.querySelector('.guardar');
-btn.addEventListener("click", ()=>{
-    var dia = document.getElementById('dia').value;
-    var eventos = document.getElementById('eventos').value;
-    var accidente = document.getElementById('accidente').value;
-    var table = document.getElementsByTagName('table')[0];
-    var newRow = table.insertRow(table.rows.length / 2 + 1);
-    var cel1 = newRow.insertCell(0);
-    var cel2 = newRow.insertCell(1);
-    var cel3 = newRow.insertCell(2);
-    cel1.innerHTML = dia;
-    cel2.innerHTML = eventos;
-    cel3.innerHTML = accidente;
-})};
-window.onload = function() {
-    addEvent();
-}

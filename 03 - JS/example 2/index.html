@@ -7,6 +7,7 @@
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="main.css">
     <script src="script.js"></script>
+    <script src="script2.js"></script>
   </head>
   <body>
     <h1>Hello</h1>
@@ -22,7 +23,7 @@
       </tr>
     </table>
     <h2>Agregar nuevo evento</h2>
-
+    <div class="container"> 
     <label for="dia">Dia:</label>
     <input type="text" name="dia" id="dia"> 
     
@@ -30,7 +31,8 @@
     <input type="text" name="actividades" id="eventos"> 
     
     <label for="accidente">Accidente:</label>
-    <input type="text" name="accidente" id="accidente"> 
+    <div class="container"> <input type="radio" name="accidente" value="Si">Si<br>
+    <input type="radio" name="accidente" value="No">No<br> </div>
     <input type="submit" value="Guardar" class="guardar">
   </body>
 </html>
